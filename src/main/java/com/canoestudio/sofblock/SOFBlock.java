@@ -11,10 +11,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = SOFBlock.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
+@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
 public class SOFBlock {
 
-    public static final String MOD_ID = "sofblock";
+    public static final String MOD_ID = Tags.MOD_ID;
     public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);
 
     @Mod.EventHandler
