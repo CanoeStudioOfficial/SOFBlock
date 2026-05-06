@@ -30,7 +30,7 @@ public class BlockCrystalCluster extends Block {
 
     public BlockCrystalCluster() {
         super(Material.GLASS, MapColor.DIAMOND);
-        this.setTranslationKey("crystal_cluster");
+        this.setTranslationKey("sofblock.crystal_cluster");
         this.setRegistryName("crystal_cluster");
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.setHardness(1.5f);
@@ -38,6 +38,7 @@ public class BlockCrystalCluster extends Block {
         this.setLightLevel(0.5f);
         this.setSoundType(SoundType.GLASS);
         this.setHarvestLevel("pickaxe", 0);
+        this.setCreativeTab(net.minecraft.creativetab.CreativeTabs.DECORATIONS);
     }
 
     @SideOnly(Side.CLIENT)

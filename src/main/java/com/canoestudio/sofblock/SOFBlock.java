@@ -22,7 +22,7 @@ public class SOFBlock {
         LOGGER.info("Hello From {}!", Tags.MOD_NAME);
     }
 
-    @Mod.EventBusSubscriber
+    @Mod.EventBusSubscriber(modid = Tags.MOD_ID)
     public static class ObjectRegistryHandler {
 
         @SubscribeEvent
