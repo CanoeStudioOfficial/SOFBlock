@@ -1,23 +1,21 @@
 package com.canoestudio.sofblock.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraftforge.event.RegistryEvent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModBlocks {
 
+    public static final List<Block> BLOCKS = new ArrayList<>();
+    public static final List<Item> BLOCKITEMS = new ArrayList<>();
+
     public static final BlockCrystalCluster CRYSTAL_CLUSTER = new BlockCrystalCluster();
 
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().register(CRYSTAL_CLUSTER);
-    }
-
-    public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemBlock(CRYSTAL_CLUSTER)
-                .setRegistryName(CRYSTAL_CLUSTER.getRegistryName())
-                .setTranslationKey(CRYSTAL_CLUSTER.getTranslationKey())
-                .setCreativeTab(CreativeTabs.DECORATIONS));
+    public static void registerBlock(Block block) {
+        BLOCKS.add(block);
+        BLOCKITEMS.add(new ItemBlock(block).setRegistryName(block.getRegistryName()));
     }
 }

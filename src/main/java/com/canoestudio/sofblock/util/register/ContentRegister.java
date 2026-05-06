@@ -1,0 +1,55 @@
+package com.canoestudio.sofblock.util.register;
+
+import com.canoestudio.sofblock.blocks.ModBlocks;
+import com.canoestudio.sofblock.items.ModItems;
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.Objects;
+
+import static com.canoestudio.sofblock.blocks.ModBlocks.BLOCKITEMS;
+import static com.canoestudio.sofblock.SOFBlock.MOD_ID;
+
+@Mod.EventBusSubscriber(modid = MOD_ID)
+public class ContentRegister {
+
+    @SubscribeEvent
+    public static void registerBlocks(RegistryEvent.Register<Block> event) {
+        for (Block block : ModBlocks.BLOCKS) {
+            event.getRegistry().register(block);
+        }
+    }
+
+    @SubscribeEvent
+    public static void registerItems(RegistryEvent.Register<Item> event) {
+        for (Item item : ModItems.ITEMS) {
+            event.getRegistry().register(item);
+        }
+        for (Item blockItem : BLOCKITEMS) {
+            event.getRegistry().register(blockItem);
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    public static void registerModels() {
+        for (Item item : ModItems.ITEMS) {
+            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
+        }
+        for (Item blockItem : BLOCKITEMS) {
+            ModelLoader.setCustomModelResourceLocation(blockItem, 0, new ModelResourceLocation(Objects.requireNonNull(blockItem.getRegistryName()), "inventory"));
+        }
+    }
+
+    @SubscribeEvent
+    public static void registerModels(ModelRegistryEvent event) {
+        registerModels();
+    }
+}

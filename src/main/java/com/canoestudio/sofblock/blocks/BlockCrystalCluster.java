@@ -9,11 +9,11 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -30,15 +30,17 @@ public class BlockCrystalCluster extends Block {
 
     public BlockCrystalCluster() {
         super(Material.GLASS, MapColor.DIAMOND);
-        this.setTranslationKey("sofblock.crystal_cluster");
-        this.setRegistryName("crystal_cluster");
-        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        this.setHardness(1.5f);
-        this.setResistance(3.0f);
-        this.setLightLevel(0.5f);
-        this.setSoundType(SoundType.GLASS);
-        this.setHarvestLevel("pickaxe", 0);
-        this.setCreativeTab(net.minecraft.creativetab.CreativeTabs.DECORATIONS);
+        setTranslationKey("sofblock.crystal_cluster");
+        setRegistryName("crystal_cluster");
+        setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+        setHardness(1.5f);
+        setResistance(3.0f);
+        setLightLevel(0.5f);
+        setSoundType(SoundType.GLASS);
+        setHarvestLevel("pickaxe", 0);
+        setCreativeTab(CreativeTabs.DECORATIONS);
+
+        ModBlocks.registerBlock(this);
     }
 
     @SideOnly(Side.CLIENT)

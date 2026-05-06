@@ -1,18 +1,17 @@
 package com.canoestudio.sofblock.items;
 
-import com.canoestudio.sofblock.SOFBlock;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraftforge.event.RegistryEvent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModItems {
 
-    public static final Item CRYSTAL_SHARD = new Item()
-            .setTranslationKey(SOFBlock.MOD_ID + ".crystal_shard")
-            .setRegistryName("crystal_shard")
-            .setCreativeTab(CreativeTabs.MATERIALS);
+    public static final List<Item> ITEMS = new ArrayList<>();
 
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(CRYSTAL_SHARD);
+    public static final Item CRYSTAL_SHARD = new ItemCrystalShard();
+
+    public static void registerItem(Item item) {
+        ITEMS.add(item);
     }
 }
