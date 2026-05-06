@@ -1,6 +1,10 @@
 package com.canoestudio.sofblock;
 
+import com.canoestudio.sofblock.util.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,9 +15,22 @@ public class SOFBlock {
     public static final String MOD_ID = Tags.MOD_ID;
     public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);
 
+    @SidedProxy(clientSide = "com.canoestudio.sofblock.util.proxy.ClientProxy", serverSide = "com.canoestudio.sofblock.util.proxy.CommonProxy")
+    public static CommonProxy proxy;
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        proxy.preInit(event);
         LOGGER.info("Hello From {}!", Tags.MOD_NAME);
     }
 
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+        proxy.init(event);
+    }
+
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        proxy.postInit(event);
+    }
 }
