@@ -1,2 +1,6 @@
-tile.crystal_cluster.name=Crystal Cluster
-item.crystal_shard.name=Crystal Shard
+tile.primordial_aer_crystal.name=Primordial Aer Crystal
+tile.primordial_aqua_crystal.name=Primordial Aqua Crystal
+tile.primordial_ignis_crystal.name=Primordial Ignis Crystal
+tile.primordial_ordo_crystal.name=Primordial Ordo Crystal
+tile.primordial_perditio_crystal.name=Primordial Perditio Crystal
+tile.primordial_terra_crystal.name=Primordial Terra Crystal

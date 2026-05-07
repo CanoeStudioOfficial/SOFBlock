@@ -1,5 +1,5 @@
 {
-    "parent": "sofblock:block/crystal_cluster",
+    "parent": "sofblock:block/primordial_aqua_crystal",
     "display": {
         "thirdperson_righthand": {
             "translation": [0, 3.52, 0],

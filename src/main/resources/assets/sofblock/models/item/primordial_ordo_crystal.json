@@ -1,0 +1,28 @@
+{
+    "parent": "sofblock:block/primordial_ordo_crystal",
+    "display": {
+        "thirdperson_righthand": {
+            "translation": [0, 3.52, 0],
+            "scale": [0.5, 0.5, 0.5]
+        },
+        "thirdperson_lefthand": {
+            "translation": [0, 3.52, 0],
+            "scale": [0.5, 0.5, 0.5]
+        },
+        "firstperson_righthand": {
+            "translation": [0, 3, 0],
+            "scale": [0.5, 0.5, 0.5]
+        },
+        "firstperson_lefthand": {
+            "translation": [0, 3, 0],
+            "scale": [0.5, 0.5, 0.5]
+        },
+        "gui": {
+            "rotation": [30, -135, 0],
+            "scale": [0.625, 0.625, 0.625]
+        },
+        "head": {
+            "translation": [0, 14, 0]
+        }
+    }
+}

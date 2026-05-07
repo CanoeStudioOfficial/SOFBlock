@@ -1,2 +1,6 @@
-tile.crystal_cluster.name=水晶簇
-item.crystal_shard.name=水晶碎片
+tile.primordial_aer_crystal.name=元始风之水晶
+tile.primordial_aqua_crystal.name=元始水之水晶
+tile.primordial_ignis_crystal.name=元始火之水晶
+tile.primordial_ordo_crystal.name=元始秩序水晶
+tile.primordial_perditio_crystal.name=元始混沌水晶
+tile.primordial_terra_crystal.name=元始地之水晶

@@ -57,7 +57,7 @@ dependencies {
     // compileOnly = compile time dependency
     // annotationProcessor = annotation processing dependencies
     // embed = bundle dependencies into final output artifact (no relocation)
-
+    implementation rfg.deobf('curse.maven:thaumcraft-223628:2629023')
     // Transitive dependencies:
     // (Dependencies that your dependency depends on)
     // If you wish to exclude transitive dependencies in the described dependencies

@@ -3,8 +3,8 @@
 	"credit": "CanoeStudio",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "sofblock:blocks/crystal_cluster",
-		"texture": "sofblock:blocks/crystal_cluster"
+		"particle": "sofblock:blocks/primordial_aqua_crystal",
+		"texture": "sofblock:blocks/primordial_aqua_crystal"
 	},
 	"elements": [
 		{
